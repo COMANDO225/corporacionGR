@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--bg-aside: #f5f5f5;
+	--h-nav: 64px;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--h-nav: 72px;
+	}
+}
+.wrapper {
+	@apply w-full px-[3%] lg:px-[20px];
+}
+
+.h1 {
+	@apply font-bold text-2xl;
+}
