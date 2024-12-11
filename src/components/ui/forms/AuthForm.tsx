@@ -18,12 +18,14 @@ import { Input } from "@/components/ui/input";
 
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { signIn } from "@/actions/user.action";
+import { useRouter } from "next/navigation";
 
 interface AuthFormProps {
 	type: "sign-in" | "sign-up";
 }
 
 const AuthForm: FC<AuthFormProps> = ({ type }) => {
+	const router = useRouter();
 	const [, setIsSubmitting] = useState<boolean>(false);
 	const [viewPassword, setViewPassword] = useState<boolean>(false);
 
@@ -39,9 +41,7 @@ const AuthForm: FC<AuthFormProps> = ({ type }) => {
 		setIsSubmitting(true);
 
 		try {
-			const response = await signIn(values);
-
-			console.log("respuesta", response);
+			router.push("/");
 		} catch (error) {
 			console.error("Error en la autenticación:", error);
 

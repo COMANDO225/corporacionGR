@@ -7,9 +7,9 @@ interface MasterLayoutProps {
 	children: React.ReactNode;
 }
 
-const MasterLayout: FC<MasterLayoutProps> = async ({ children }) => {
-	const usuario = await fetchUser();
-	console.log("usuario", usuario);
+const MasterLayout: FC<MasterLayoutProps> = ({ children }) => {
+	// const usuario = await fetchUser();
+	// console.log("usuario", usuario);
 	return (
 		<Fragment>
 			<Navbar />

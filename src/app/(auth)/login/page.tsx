@@ -1,5 +1,4 @@
 import AuthForm from "@/components/ui/forms/AuthForm";
-import { redirect } from "next/navigation";
 import React from "react";
 
 const fetchUser = async () => {
